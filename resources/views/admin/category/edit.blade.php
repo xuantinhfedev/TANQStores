@@ -5,6 +5,10 @@
     .img-mt {
         margin-top: 8px;
     }
+
+    .btn {
+        color: #ffffff;
+    }
 </style>
 
 <div class="row">

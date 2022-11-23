@@ -1,27 +1,32 @@
+<style>
+    .btn {
+        color: #ffffff;
+    }
+</style>
 <div>
-    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div wire:ignore.self class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content">
+          <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Xóa danh mục</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Xóa danh mục</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form wire:submit.prevent="destroyCategory">
+
+            <form action="" wire:submit.prevent="destroyCategory">
 
                 <div class="modal-body">
-                    <h6>Bạn có chắc chắn muốn xóa danh mục này không?</h6>
+                    Bạn có chắc chắn muốn xóa danh mục này không
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
                     <button type="submit" class="btn btn-primary">Đồng ý</button>
                 </div>
             </form>
-
-            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="row">
+<div class="row">
     <div class="col-md-12">
 
         @if (session('message'))
@@ -53,7 +58,7 @@
                             <td>{{ $item->status=='1'?'Hidden':'Visible' }}</td>
                             <td>
                                 <a href="{{ url('admin/category/'.$item->id.'/edit') }}" class="btn btn-success">Sửa</a>
-                                <a href="#" wire:click="deleteCategory({{ $item->id }})" data-bs-toggle="modal" data-bs-target="#deleteModal" class="btn btn-danger">Xóa</a>
+                                <a href="#deleteModal" wire:click="deleteCategory({{ $item->id }})" data-bs-toggle="modal" data-bs-target="#deleteModal" class="btn btn-danger">Xóa</a>
                             </td>
                         </tr>
                         @endforeach
@@ -67,3 +72,12 @@
     </div>
 </div>
 </div>
+
+@push('script')
+<script>
+    window.addEventListener('close-modal', event=>{
+
+        $('#deleteModal').modal('hide');
+    })
+</script>
+@endpush
