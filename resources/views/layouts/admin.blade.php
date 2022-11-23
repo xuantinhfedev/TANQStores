@@ -32,7 +32,7 @@
 
             <div class="main-panel">
                 <div class="content-wrapper">
-                    
+
                     @yield('content')
                 </div>
             </div>
@@ -51,6 +51,6 @@
     <script src="{{ asset('admin/js/jquery.dataTables.js') }}"></script>
     <script src="{{ asset('admin/js/dataTables.bootstrap4.js') }}"></script>
     <!-- End custom js for this page-->
-    @livewireStyles
+    @livewireScripts
 </body>
 </html>
