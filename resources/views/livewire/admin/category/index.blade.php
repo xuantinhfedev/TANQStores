@@ -28,7 +28,6 @@
 
 <div class="row">
     <div class="col-md-12">
-
         @if (session('message'))
             <h6 class="alert alert-success">{{ session('message') }}</h6>
         @endif
@@ -65,7 +64,7 @@
                     </tbody>
                 </table>
                 <div>
-                    {!! $categories->links() !!}
+                    {{ $categories->links() }}
                 </div>
             </div>
         </div>

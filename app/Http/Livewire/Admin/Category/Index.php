@@ -9,8 +9,8 @@ use Illuminate\Support\Facades\File;
 
 class Index extends Component
 {
-    use WithPagination;
-    protected $paginationTheme = 'bootstrap';
+    // use WithPagination;
+    // protected $paginationTheme = 'bootstrap';
     public $category_id;
 
     public function deleteCategory($category_id)

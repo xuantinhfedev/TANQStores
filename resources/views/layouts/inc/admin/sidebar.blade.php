@@ -14,23 +14,23 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-          <i class="mdi mdi-playlist-play menu-icon"></i>
+          <i class="mdi mdi-format-list-bulleted menu-icon"></i>
           <span class="menu-title">Danh mục</span>
           <i class="menu-arrow"></i>
         </a>
 
         <div class="collapse" id="ui-basic">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="category/create">Thêm danh mục</a></li>
+            <li class="nav-item"> <a class="nav-link" href="/admin/category/create">Thêm danh mục</a></li>
             <li class="nav-item"> <a class="nav-link" href="/admin/category">Xem danh mục</a>
             </li>
           </ul>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="pages/forms/basic_elements.html">
+        <a class="nav-link" href="/admin/brands/index">
           <i class="mdi mdi-view-headline menu-icon"></i>
-          <span class="menu-title">Form elements</span>
+          <span class="menu-title">Thương hiệu</span>
         </a>
       </li>
       <li class="nav-item">
