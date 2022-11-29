@@ -13,16 +13,30 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+        <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic-category" aria-expanded="false" aria-controls="ui-basic-category">
           <i class="mdi mdi-format-list-bulleted menu-icon"></i>
           <span class="menu-title">Danh mục</span>
           <i class="menu-arrow"></i>
         </a>
 
-        <div class="collapse" id="ui-basic">
+        <div class="collapse" id="ui-basic-category">
+          <ul class="nav flex-column sub-menu" >
+            <li class="nav-item"> <a class="nav-link" href="{{ url("admin/category/create") }}">Thêm danh mục</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ url("admin/category") }}">Xem danh mục</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic-product" aria-expanded="false" aria-controls="ui-basic-product">
+          <i class="mdi mdi-plus-circle menu-icon"></i>
+          <span class="menu-title">Sản phẩm</span>
+          <i class="menu-arrow"></i>
+        </a>
+
+        <div class="collapse" id="ui-basic-product">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="/admin/category/create">Thêm danh mục</a></li>
-            <li class="nav-item"> <a class="nav-link" href="/admin/category">Xem danh mục</a>
+            <li class="nav-item"> <a class="nav-link" href="{{ url("admin/products/create") }}">Thêm sản phẩm</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ url("admin/products") }}">Xem sản phẩm</a>
             </li>
           </ul>
         </div>
