@@ -7,6 +7,8 @@ use App\Http\Requests\ProductFormRequest;
 use App\Models\Brand;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Color;
+use App\Models\ProductColor;
 use App\Models\ProductImage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -53,6 +55,18 @@ class ProductController extends Controller
             }
         }
 
+        if($request->colors){
+            foreach ($request->colors as $key => $color) {
+                $product -> productColors()->create(
+                    [
+                        'product_id' => $product->id,
+                        'color_id' => $color,
+                        'quantity' => $request->colorQuantity[$key] ?? 0
+                    ]
+                    );
+            }
+        }
+
         return redirect('/admin/products')->with('message', 'Sản phẩm được thêm mới thành công');
     }
 
@@ -60,7 +74,8 @@ class ProductController extends Controller
     {
         $categories = Category::all();
         $brands = Brand::all();
-        return view('admin.products.create', compact('categories', 'brands'));
+        $colors = Color::where('status', '0')->get();
+        return view('admin.products.create', compact('categories', 'brands','colors'));
     }
 
     public function index()
@@ -74,7 +89,11 @@ class ProductController extends Controller
         $categories = Category::all();
         $brands = Brand::all();
         $product = Product::findOrFail($product_id);
-        return view('admin.products.edit', compact('categories', 'brands', 'product'));
+        $product_color = $product->productColors->pluck('color_id')->toArray();
+        $colors = Color::whereNotIn('id', $product_color)->get();
+        // $colors = Color::all;
+
+        return view('admin.products.edit', compact('categories', 'brands', 'product', 'colors'));
     }
 
     public function update( ProductFormRequest $request, int $product_id)
@@ -116,6 +135,17 @@ class ProductController extends Controller
                     ]);
                 }
             }
+            if($request->colors){
+                foreach ($request->colors as $key => $color) {
+                    $product -> productColors()->create(
+                        [
+                            'product_id' => $product->id,
+                            'color_id' => $color,
+                            'quantity' => $request->colorQuantity[$key] ?? 0
+                        ]
+                        );
+                }
+            }
 
             return redirect('/admin/products')->with('message', 'Sản phẩm được cập nhật thành công');
         }else{
@@ -130,7 +160,38 @@ class ProductController extends Controller
             File::delete($productImage->image);
         }
         $productImage->delete();
-        return redirect('admin/products')->with('message', 'Ảnh sản phẩm đã xóa');
+        return redirect()->back()->with('message', 'Xóa ảnh sản phẩm thành công!!');
+    }
 
+    public function destroy(int $product_id)
+    {
+        $product = Product::findOrFail($product_id);
+        if($product->productImages()){
+            foreach ($product->productImages as $image) {
+                if(File::exists($image->image)){
+                    File::delete($image->image);
+                }
+            }
+        }
+        $product->delete();
+        return redirect()->back()->with('message', 'Xóa bản ghi thành công!!');
+    }
+
+    public function updateProdColorQty(Request $request, $prod_color_id)
+    {
+        $productColorData = Product::findOrFail($request->product_id)
+                                ->productColors()->where('id', $prod_color_id)->first();
+        $productColorData->update([
+            'quantity' => $request->qty
+        ]);
+        // return response()->json(['message' => 'Số lượng màu sản phẩm được cập nhật thành công']);
+        return response()->json(['message' => 'Thành công!!']);
+    }
+
+    public function deleteProdColorQty($prod_color_id)
+    {
+        $prodColor = ProductColor::findOrFail($prod_color_id);
+        $prodColor->delete();
+        return response()->json(['message' => 'Màu của sản phẩm đã được xóa']);
     }
 }

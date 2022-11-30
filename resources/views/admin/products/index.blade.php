@@ -46,7 +46,7 @@
                             <td>{{ $product->status=='1'?'Ẩn':'Hiện' }}</td>
                             <td>
                                 <a href="{{ url('admin/products/'.$product->id.'/edit') }}" class="btn btn-success">Sửa</a>
-                                <a href="" class="btn btn-danger">Xóa</a>
+                                <a href="{{ url('admin/products/'.$product->id.'/delete') }}" onclick="return confirm('Bạn có chắc chắn muốn xóa bản ghi này không?')" class="btn btn-danger">Xóa</a>
                             </td>
                         </tr>
                         @empty

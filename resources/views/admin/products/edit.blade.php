@@ -4,6 +4,9 @@
 
 <div class="row">
     <div class="col-md-12">
+        @if(session('message'))
+            <h5 class="alert alert-success mb-2">{{ session('message') }}</h5>
+        @endif
         <div class="card">
             <div class="card-header">
                 <h3>
@@ -38,6 +41,9 @@
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="image-tab" data-bs-toggle="tab" data-bs-target="#image-tab-pane" type="button" role="tab" aria-controls="image-tab-pane" aria-selected="false">Product Image</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="color-tab" data-bs-toggle="tab" data-bs-target="#color-tab-pane" type="button" role="tab" >Product Colors</button>
                         </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
@@ -149,13 +155,70 @@
                                     <div class="col-md-2">
                                         <img src="{{ asset($image->image) }}" style="width: 120px; height: 120px"
                                         class="me-4 border" alt="Image">
-                                        <a href="{{ url('admin/product-image/'.$image->id.'/delete') }}" class="d-block">Xóa</a>
+                                        <a href="{{ url('admin/product-image/'.$image->id.'/delete') }}" class="btn btn-danger d-block mt-8" style="width: 120px; margin-top: 8px">Xóa</a>
                                     </div>
                                     @endforeach
                                 </div>
                                 @else
                                     <h5>Không có hình ảnh được thêm vào</h5>
                                 @endif
+                            </div>
+                        </div>
+                        <div class="tab-pane fade border p-3" id="color-tab-pane" role="tabpanel" tabindex="0">
+                            <div class="mb-3">
+                                <h4>Thêm màu sắc sản phẩm</h4>
+                                <label>Chọn màu sắc</label>
+                                <hr>
+                                <div class="row">
+                                    @forelse ($colors as $colorItem)
+                                    <div class="col-md-3">
+                                        <div class="p-2 border mb-4">
+                                            Color: <input type="checkbox" name="colors[{{ $colorItem->id }}]" value="{{ $colorItem->id }}" /> {{ $colorItem->name }}
+                                            <br/>
+                                            Quantity: <input type="number" name="colorQuantity[{{ $colorItem->id }}]" style="width: 70px; border: 1px solid"/>
+                                        </div>
+                                    </div>
+                                    @empty
+                                        <div class="col-md-12">
+                                            <h1>Không tìm thấy màu nào</h1>
+                                        </div>
+                                    @endforelse
+                                </div>
+                            </div>
+                        <hr/>
+                            <div class="table-responsive">
+                                <table class="table table-sm table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Color Name</th>
+                                            <th>Quantity</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($product->productColors as $prodColor)
+                                        <tr class="prod-color-tr">
+                                            <td>
+                                                @if($prodColor->color)
+                                                    {{ $prodColor->color->name }}
+                                                @else
+                                                    Không tìm thấy màu nào
+                                                @endif
+                                            </td>
+                                            <td>
+                                                <div class="input-group mb-3" style="width: 150px">
+                                                    <input type="text" value="{{ $prodColor->quantity }}" class="productColorQuantity form-control form-control-sm">
+                                                    <button class="updateProductColorBtn btn btn-primary btn-sm text-white" type="button" value="{{ $prodColor->id }}">Cập nhật</button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <button class="deleteProductColorBtn btn btn-danger btn-sm text-white" type="button" value="{{ $prodColor->id }}">Xóa</button>
+
+                                            </td>
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -167,6 +230,61 @@
         </div>
     </div>
 </div>
+@endsection
 
+
+@section('scripts')
+
+<script>
+    $(document).ready(function () {
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $(document).on('click','.updateProductColorBtn', function () {
+
+            var product_id = "{{ $product->id }}"
+            var prod_color_id = $(this).val();
+            var qty = $(this).closest('.prod-color-tr').find('.productColorQuantity').val();
+            // alert(prod_color_id);
+
+            if(qty <= 0) {
+                alert('Số lượng bắt buộc > 0');
+                return false;
+            }
+            var data = {
+                'product_id': product_id,
+                'qty': qty
+            }
+            console.log(data);
+            $.ajax({
+                type: "POST",
+                url: "/admin/product-color/"+prod_color_id,
+                data: data,
+                success: function (response) {
+                    alert(response.message);
+                  }
+            });
+
+        });
+
+        $(document).on('click','.deleteProductColorBtn' , function () {
+            var prod_color_id = $(this).val();
+            var thisClick = $(this);
+
+            $.ajax({
+                type: "GET",
+                url: "/admin/product-color/"+prod_color_id+"/delete",
+                success: function (response) {
+                    thisClick.closest('.pro-color-tr').remove();
+                    alert(response.message);
+                }
+            });
+        });
+    });
+</script>
 
 @endsection

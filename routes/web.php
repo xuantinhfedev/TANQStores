@@ -39,7 +39,19 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
     Route::post('products', [App\Http\Controllers\Admin\ProductController::class, 'store']);
     Route::get('products/{product}/edit', [App\Http\Controllers\Admin\ProductController::class, 'edit']);
     Route::put('products/{product}', [App\Http\Controllers\Admin\ProductController::class, 'update']);
+    Route::get('products/{product_id}/delete', [App\Http\Controllers\Admin\ProductController::class, 'destroy']);
     Route::get('product-image/{product_image_id}/delete', [App\Http\Controllers\Admin\ProductController::class, 'destroyImage']);
+    Route::post('product-color/{prod_color_id}', [App\Http\Controllers\Admin\ProductController::class, 'updateProdColorQty']);
+    Route::get('product-color/{prod_color_id}/delete', [App\Http\Controllers\Admin\ProductController::class, 'deleteProdColorQty']);
+
+
+    // Colors Routes
+    Route::get('colors', [App\Http\Controllers\Admin\ColorController::class, 'index']);
+    Route::get('colors/create', [App\Http\Controllers\Admin\ColorController::class, 'create']);
+    Route::post('colors', [App\Http\Controllers\Admin\ColorController::class, 'store']);
+    Route::get('colors/{color}/edit', [App\Http\Controllers\Admin\ColorController::class, 'edit']);
+    Route::put('colors/{color_id}', [App\Http\Controllers\Admin\ColorController::class, 'update']);
+    Route::get('colors/{color_id}/delete', [App\Http\Controllers\Admin\ColorController::class, 'destroy']);
 
     // Brand Routes
     Route::get('brands/index', App\Http\Livewire\Admin\Brands\Index::class)->name('admin.brands.index');
