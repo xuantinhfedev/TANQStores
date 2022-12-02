@@ -87,4 +87,11 @@ class CategoryController extends Controller
 
         return redirect('admin/category')->with('message', 'Danh mục được cập nhật thành công');
     }
+
+    public function destroy($category_id)
+    {
+        $category = Category::find($category_id);
+        $category->delete();
+        return redirect('admin/category')->with('message', 'Xóa bản ghi thành công!!');
+    }
 }
