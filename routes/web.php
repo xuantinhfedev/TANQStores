@@ -70,7 +70,5 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
     Route::get('colors/{color_id}/delete', [App\Http\Controllers\Admin\ColorController::class, 'destroy']);
 
     // Brand Routes
-    Route::get('brands/index', App\Http\Livewire\Admin\Brands\Index::class)->name('admin.brands.index');
-    Route::get('brands/create', App\Http\Livewire\Admin\Brands\Create::class)->name('admin.brands.create');
-    Route::get('brands/edit/{brand}', App\Http\Livewire\Admin\Brands\Edit::class)->name('admin.brands.edit');
+    Route::get('/brands',App\Http\Livewire\Admin\Brand\Index::class);
 });

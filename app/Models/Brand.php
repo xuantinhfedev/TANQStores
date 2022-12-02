@@ -7,11 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Brand extends Model
 {
-    protected $table = 'brands';
+    use HasFactory;
 
+    protected $table = 'brands';
     protected $fillable = [
         'name',
-        'slug'
+        'slug',
+        'status',
+        'category_id'
     ];
-    use HasFactory;
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class,'category_id','id');
+    }
 }

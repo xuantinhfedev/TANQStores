@@ -10,10 +10,6 @@
         @if($sliderItem->image)
             <img src="{{ asset("$sliderItem->image") }}" class="d-block w-100" alt="Slider">
         @endif
-        <!-- <div class="carousel-caption d-none d-md-block">
-            <h5>{{$sliderItem->title}}</h5>
-            <p>{{$sliderItem->description}}</p>
-        </div> -->
         <div class="carousel-caption d-none d-md-block">
                     <div class="custom-carousel-content">
                         <!-- <h1>

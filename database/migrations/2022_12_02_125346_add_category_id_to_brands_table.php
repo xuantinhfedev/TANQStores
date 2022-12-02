@@ -13,12 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('brands', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('slug');
-            $table->tinyInteger('status')->default('0');
-            $table->timestamps();
+        Schema::table('brands', function (Blueprint $table) {
+            $table->integer('category_id');
         });
     }
 
@@ -29,6 +25,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('brands');
+        Schema::table('brands', function (Blueprint $table) {
+            //
+            $table->dropColumn('category_id');
+        });
     }
 };
