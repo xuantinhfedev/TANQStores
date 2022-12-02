@@ -26,14 +26,14 @@ class CategoryController extends Controller
         $validatedData = $request->validated();
 
         $category = new Category;
-
+        $uploatPath = 'uploads/category/';
         if($request->hasFile('image')){
             $file = $request->file('image');
             $ext = $file->getClientOriginalExtension();
             $filename = time().'.'.$ext;
 
             $file->move('uploads/category/', $filename);
-            $category->image = $filename;
+            $category->image = $uploatPath.$filename;
         }
         $category->name = $validatedData['name'];
         $category->slug = Str::slug($validatedData['slug']);
@@ -60,7 +60,7 @@ class CategoryController extends Controller
         $category = Category::findOrFail($category);
 
         $validatedData = $request->validated();
-
+        $uploatPath = 'uploads/category/';
         if($request->hasFile('image')){
             $path = 'uploads/category/'.$category->image;
             // dd($path);
@@ -72,7 +72,7 @@ class CategoryController extends Controller
             $filename = time().'.'.$ext;
 
             $file->move('uploads/category/', $filename);
-            $category->image = $filename;
+            $category->image = $uploatPath.$filename;
         }
         $category->name = $validatedData['name'];
         $category->slug = Str::slug($validatedData['slug']);

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use PHPUnit\TextUI\XmlConfiguration\Group;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,17 +15,31 @@ use PHPUnit\TextUI\XmlConfiguration\Group;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
+
+Route::get('/',[App\Http\Controllers\Frontend\FrontendController::class ,'index']);
+Route::get('/colections',[App\Http\Controllers\Frontend\FrontendController::class ,'categories']);
+Route::get('/colections/{category_slug}',[App\Http\Controllers\Frontend\FrontendController::class ,'products']);
+
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
 
     Route::get('dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index']);
+
+    //Slider Routes
+    Route::get('sliders', [App\Http\Controllers\Admin\SliderController::class, 'index']);
+    Route::get('sliders/create', [App\Http\Controllers\Admin\SliderController::class, 'create']);
+    Route::post('sliders',[App\Http\Controllers\Admin\SliderController::class, 'store']);
+    Route::get('sliders/{slider}/edit', [App\Http\Controllers\Admin\SliderController::class, 'edit']);
+    Route::put('sliders/{slider}', [App\Http\Controllers\Admin\SliderController::class, 'update']);
+    Route::get('sliders/{slider}/delete', [App\Http\Controllers\Admin\SliderController::class, 'destroy']);
 
     // Category Routes
     Route::get('category', [App\Http\Controllers\Admin\CategoryController::class, 'index']);
