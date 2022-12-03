@@ -223,7 +223,7 @@
                         </div>
                     </div>
                     <div>
-                        <button class="btn btn-primary text-white float-end" type="submit">Cập nhật</button>
+                        <button class="btn btn-primary text-white float-end mt-3" type="submit">Cập nhật</button>
                     </div>
                 </form>
             </div>

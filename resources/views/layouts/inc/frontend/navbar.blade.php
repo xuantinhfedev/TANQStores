@@ -3,7 +3,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-2 my-auto d-none d-sm-none d-md-block d-lg-block">
-                        <h5 class="brand-name">TAQNStores</h5>
+                        <a href="{{url('/')}}" class=" container brand-name">TAQNStores</a>
                     </div>
                     <div class="col-md-5 my-auto">
                         <form role="search">
@@ -45,7 +45,7 @@
                         
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fa fa-user"></i>{{ Auth::user()->name }}
+                                    <i class="fa fa-user"></i> {{ Auth::user()->name }}
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a></li>
@@ -96,18 +96,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Electronics</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Fashions</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Accessories</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Appliances</a>
-                        </li>
+
                     </ul>
                 </div>
             </div>
