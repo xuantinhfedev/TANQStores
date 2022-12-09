@@ -1,0 +1,137 @@
+
+.banner img{
+    width: 100%;
+}
+.title0 p{
+    text-align: center;
+    font-size: 35px;
+    margin: 20px 0px;
+}
+.title1 img{
+    width: 100%;
+}
+.hang{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+.cot a img{
+    height: 180px;
+}
+.cot a{
+    text-decoration: none;
+    color: black;
+}
+.tensp{
+    font-size: 18px;
+    text-align: center;
+}
+.tensp:hover{
+    color: red;
+}
+p{
+    margin: 0;
+}
+.price{
+    text-align: center;
+    color: red;
+    font-size: 25px;
+    font-family: Arial;
+}
+.view-more{
+    text-align: center;
+    margin: 25px 0;
+}
+.view-more button{
+    height: 55px;
+    border: none;
+    background-color: #e34444;
+    color: white;
+    font-size: 15px;
+    width: 230px;
+}
+.view-more button:hover{
+    opacity: 80%;
+    cursor: pointer;
+}
+.title2 img{
+    width: 100%;
+}
+.title3{
+    display: flex;
+    background-color: black;
+    color: white;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.acc{
+    position: relative;
+}
+
+/* .cot:hover {
+    transform: translateY(-10px);
+} */
+.cot:hover >a>img{
+    transform: translateY(-10px);
+}
+.cot:hover >a>.sale{
+    transform: translateY(-10px);
+}
+.cot>a>img{
+    transition: transform 250ms;
+
+}
+.cot{
+    position: relative;
+}
+
+.cot>a>.sale{
+    transition: transform 250ms;
+    position: absolute;
+    color: white;
+    background-color: #ff0036;
+    line-height: 15px;
+    font-family: Arial;
+    padding: 2px;
+    top: 0%;
+    left: 2%;
+}
+
+#slideshow {
+    overflow: hidden;
+    height: 510px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .slide-wrapper {
+    width: 2912px;
+    -webkit-animation: slide 14s ease infinite;
+  }
+  
+  .slide {
+    float: left;
+    height: 510px;
+    width: 728px;
+  }
+  
+  
+  @-webkit-keyframes slide {
+    20% {margin-left: 0px;}
+    30% {margin-left: -100px;}
+    50% {margin-left: -728px;}
+    60% {margin-left: -1456px;}
+    80% {margin-left: -1456px;}
+  }
+
+  .tensp{
+    padding: 10px 0;
+ }
+ .price{
+    font-size: 20px;
+ }
