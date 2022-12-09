@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #bbb4b4;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 150px;
+}
+.form_group{
+    background-color: rgb(255, 255, 255);
+    width: 450px;
+    height: 400px;
+    border-radius: 20px;
+    margin: auto;
+}
+.banner{
+    width: 100%;
+    height: 20%;
+    font-size: 40px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #417690;
+    color: white;
+    border-radius: 10px 10px 0px 0px;
+}
+.from_main{
+    width: 100%;
+    height: 80%;
+}
+.form_group_Inp{
+    width: 100%;
+    height: 30%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.usernameInp, .PassInp{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    width: 90%;
+    height: 50%;
+    padding-left: 10px;
+    position: relative;
+}
+.login_btn{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.LoginBtn{
+    width: 50%;
+    height: 75%;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    background-color: #79aec8;
+}
+.thongbao{
+    top: 42%;
+}
+.thongbao1{
+    top: 54%;
+}
+.thongbao, .thongbao1{
+    position: absolute;
+
+    left: 36%;
+}
+.infofail{
+    position: absolute;
+    color: red;
+    left: 41%;
+    top: 54%;
+    list-style-type: none;
+}
+.LoginBtn:hover{
+    background-color: #417690;
+}
+
+.GH{
+    position: relative;
+}
+.carthover{
+    background-color: rgb(249, 97, 97);
+    color: azure;
+    width: 50%;
+    height:50%;
+    font-size: 15px;
+    clip-path: ellipse(50% 50% at center);
+    position: absolute;
+    text-align: center;
+    top: -10%;
+    right: -20%;
+}
