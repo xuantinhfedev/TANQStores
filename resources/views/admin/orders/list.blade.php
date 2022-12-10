@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="{{ asset('assets/css/users/list.css')}}">
+	
 	<title>Document</title>
 </head>
 
@@ -68,7 +69,7 @@
 					</form>
 					<table class="user-list" border="1">
 						<thead>
-							<tr>
+							<tr style="background-color: #999;">
 								<th>ID</th>
 								<th>Tên khách hàng</th>
 								<th>Địa chỉ</th>

@@ -6,20 +6,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="{{ asset('assets/css/users/list.css')}}">
+	
 	<title>Document</title>
 </head>
 
 <body>
-	<header>
-		<div class="banner">
+	<header >
+		<div class="banner" >
 			<img src="{{ asset('assets/images/admin site.PNG')}}" class="image_banner" alt="">
 		</div>
-		<div class="content_header">
+		<div class="content_header" >
 			@if (session()->has('admin'))
             <div class="account">
                 <div class="name_acc"> Xin Chào {{session()->get('admin')}}
                     <ul class="info_acc">
-                        <li onclick="logout()">logout</li>
+                        <li onclick="logout()">Logout</li>
                     </ul>
                 </div>
              </div>
@@ -63,7 +64,7 @@
 					</form>
 					<table class="user-list" border="1" style="table-layout: fixed; word-wrap:break-word;">
 						<thead>
-							<tr>
+							<tr style="background-color: #999;">
 								<th>STT</th>
 								<th>Tên</th>
 								<th>Ngày sinh</th>
@@ -71,7 +72,7 @@
 								<th>Email</th>
 								<th>Mật khẩu</th>
 								<th>Số điện thoại</th>
-								<th>Admin</th>
+								<th>Chức năng</th>
 								<th>Địa chỉ</th>
 								<th width=5%>Sửa</th>
 								<th width=5%>Xóa</th>
@@ -88,15 +89,17 @@
 								<td>{{$item->Email}}</td>
 								<td>{{$item->password}}</td>
 								<td>{{$item->SoDT}}</td>
-								<td>{{$item->IsAdmin}}</td>
+								<td>
+									{{$item->IsAdmin== 1?'Admin':'User'}}
+								</td>
 								<td>{{$item->DiaChi}}</td>
 								<td>
-									<button class="btn-update"><a href="{{route('users.edit', ['id'=>$item->MaTK])}}">Sửa</a></button>
+									<button class="btn-update"><a href="{{route('users.edit', ['id'=>$item->MaTK])}}">Sửa <i class="fa-solid fa-user-pen"></i></a></button>
 								</td>
 								<td>
 									<button class="btn-del">
 										<a onclick="return confirm('Bạn có chắc chắn muốn xóa không?')"
-										href="{{route('users.delete', ['id'=>$item->MaTK])}}">Xóa</a>
+										href="{{route('users.delete', ['id'=>$item->MaTK])}}">Xóa <i class="fa-solid fa-trash-can"> </i></a>
 									</button>
 								</td>
 							</tr>
