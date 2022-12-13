@@ -4,36 +4,23 @@
 
 <link rel="stylesheet" href="{{ asset('assets/css/XemDanhMuc.css')}}">
 <link rel="stylesheet" href="{{ asset('assets/css/stylehome.css')}}">
-    </header>
     <div class="content">
         <div class="filters">
             <form action="{{route('LocDM')}}" method="POST" id="form">
-            {{-- <div class="size-filter">
-            
-                <strong><p>Size:</p></strong>
-                <div class="size">
-                    <ul>
-                        @for ( $i = 24; $i < 46; $i++)
-                            <li id="{{$i}}"  onclick="SelecetSize({{$i}})">{{$i}}</li>
-                        @endfor
-                        
-                    </ul>
-                </div>
-            </div> --}}
             <div class="select-box">
                 <div class="labe" style="text-align: center; width:200px; "><label for="select-box1" class="label select-box1"><span class="label-desc" style="color:rgb(7, 77, 189);font-size:20px">Kích cỡ:</span> </label></div>
-                
+
                 <input type="hidden" class="SizeLoc" name="SizeLoc" id="SizeLoc" value="0">
-                
+
                 <input type="hidden" class="MaDM" name="MaDM" id="MaDM" value="{{$id}}">
                 <select id="select-box1" class="select" onchange="ChangeSelect()">
                     <option value="0">Tất cả các kích cỡ</option>
                     @for ( $i = 24; $i < 46; $i++)
                             <option value="{{$i}}">{{$i}}</option>
                         @endfor
-                
+
                 </select>
-                
+
             </div>
             <div class="price-filter">
                 <div class="range-slider">
@@ -43,7 +30,7 @@
                   <input value="2000000" min="1000" max="2000000" name="Value2" step="500" type="range">
                 </div>
                 <input type="hidden" name="_token" value="<?php echo csrf_token();?>">
-                
+
               </div>
               <div id="submit"><input type="submit" value="Lọc"></div>
             </form>
@@ -56,7 +43,7 @@
             <div class="sp-nam">
                 <div class="hang">
                         @foreach ($sp as $item)
-                            
+
                         @php if($item->KhuyenMai != null)echo "";  @endphp
                         <div class="cot">
                             <a href="{{route('chitiet',['id' => $item->MaSP]) }}"><img src="{{ asset('storage/products/'.$item->HinhAnh)}}" alt="Giay">@if($item->KhuyenMai != null) <div class="sale">{{"-".$item->KhuyenMai ."%"}}</div>  @endif</a>
