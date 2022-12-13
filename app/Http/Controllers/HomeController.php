@@ -15,7 +15,6 @@ use App\Models\SanPham;
 class homeController extends Controller
 {
     public function home(){
-        // dd($data);
         $spnam = new LaySanPham();
         $SanPhamList = $spnam->getAllSanPham_Nam();
 

@@ -22,8 +22,7 @@ class LaySanPham extends Model
     }
     function getAllSanPham_Nam(){
 
-        $sp = DB::select('SELECT sanpham.*, SUM(SoLuongCon) as TongSoLuongCon FROM `chitietsanpham` INNER JOIN sanpham ON sanpham.MaSP = chitietsanpham.MaSP WHERE sanpham.MaDanhMuc =1 GROUP BY sanpham.MaSP,sanpham.TenSP,sanpham.GiaBan,sanpham.MoTa,sanpham.hinhanh, sanpham.madanhmuc, sanpham.matheloai, sanpham.khuyenmai');
-
+        $sp = DB::select('SELECT sanpham.*, SUM(SoLuongCon) as TongSoLuongCon FROM `chitietsanpham` INNER JOIN sanpham ON sanpham.MaSP = chitietsanpham.MaSP WHERE sanpham.MaDanhMuc = 1 GROUP BY sanpham.MaSP,sanpham.TenSP,sanpham.GiaBan,sanpham.MoTa,sanpham.hinhanh, sanpham.madanhmuc, sanpham.matheloai, sanpham.khuyenmai');
         return $sp;
     }
     function getSP_DanhMuc($iddm){
