@@ -3,16 +3,6 @@
 @section('content')
 <link rel="stylesheet" href="{{ asset('assets/css/stylehome.css')}}">
 
-
-<div class="thongbao"></div>
-    {{-- <div class="banner"><img src="{{ asset('assets/images/Image 1.png')}}" alt="banner1"></div> --}}
-<div id="slideshow">
-    <div class="slide-wrapper">
-        <div class="slide"><img src="{{ asset('assets/images/bananas2.jpg')}}"></div>
-        <div class="slide"><img src="{{ asset('assets/images/nike1.jpg')}}"></div>
-            <div class="slide"><img src="{{ asset('assets/images/bananas1.jpg')}}"></div>
-    </div>
-    </div>
     <div class="content">
         <div class="title0"><p>SẢN PHẨM</p></div>
         <div class="sp-nam">
