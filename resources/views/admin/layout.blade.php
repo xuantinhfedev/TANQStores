@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="{{ asset('assets/css/users/add.css')}}">
+	<link rel="stylesheet" href="{{ asset('assets/css/users/list.css')}}">
 	<title>Document</title>
 </head>
 
@@ -40,37 +40,14 @@
 			</ul>
 		</div>
 		<div class="container">
-			<div class="maincontent">
-                <form action="{{route('danhmuc.post-edit')}}" method="POST">
-                    <table>
-						<caption><h1>{{$title}}</h1></caption>
-                        <tr>
-                            <td width="15%"><label for="name">Tên danh mục</label></td>
-                            <td width="95%"><input type="text" name="name" id="name" value="{{old('name') ?? $danhmucDetail->TenDanhMuc}}">
-								@error('name')
-									<span style="color: red; font-size:14px;">*{{$message}}</span>
-								@enderror
-							</td>
-                        </tr>
-						<tr>
-							<td colspan="2" style="padding-left: 15%;">
-								<button class="btn-add" type="submit">Cập nhật</button>
-								<button class="btn-back"><a href="{{route('danhmuc.index')}}">Quay lại</a></button>
-							</td>
-						</tr>
-                    </table>
-                    @csrf
-                </form>
-
-				@if (session('msg'))
-				<div class="message">{{session('msg')}}</div>
-				@endif
-			</div>
+            @yield('content')
 		</div>
 	</div>
 	<footer>
 
 	</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 <script>
     function logout(){

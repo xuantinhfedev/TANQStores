@@ -19,6 +19,7 @@ use App\Http\Controllers\XemTheLoaiController;
 use App\Http\Controllers\ThongTinCaNhanController;
 use App\Http\Controllers\ThanhToanController;
 use App\Http\Controllers\ThongKeController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,9 @@ use App\Http\Controllers\ThongKeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/contact-us', [ContactController::class, 'contact'])->name('contact.contact');
+Route::post('/send-message', [ContactController::class, 'sendEmail'])->name('contact.send');
 
 Route::prefix('/')->group(function(){
     Route::get('/', [homeController::class, 'home'])->name('home');
