@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="{{ asset('assets/css/layout.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
         integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <title>XUNA SHOP</title>
 </head>
 
@@ -20,19 +22,20 @@
             <div class="hotline">
                 <p>
                     <i class="fa-solid fa-phone"></i>
-                    Hotline: 0983669621</p>
+                    Hotline: 0983669621
+                </p>
             </div>
             <div class="checking-order"><a href="{{ route('KTDonHang') }}">
-                <i class="fa-solid fa-cart-shopping" style="color: white; font-size: 14px"></i>
-                Kiểm tra đơn hàng</a></div>
+                    <i class="fa-solid fa-cart-shopping" style="color: white; font-size: 14px"></i>
+                    Kiểm tra đơn hàng</a></div>
             <div class="login">
                 @if (!session()->has('TenTaiKhoan'))
                     <a style="padding: 0" href="{{ route('DangNhap') }}">
                         <i class="fa-solid fa-right-to-bracket"></i>
                         Đăng Nhập</a>
-                        <span style="color: white; margin: 0; padding: 0 5px">|</span>
-                        <a href="{{ route('DangKy') }}">
-                            <i style="font-size: 12px" class="fa-regular fa-registered"></i>
+                    <span style="color: white; margin: 0; padding: 0 5px">|</span>
+                    <a href="{{ route('DangKy') }}">
+                        <i style="font-size: 12px" class="fa-regular fa-registered"></i>
                         Đăng Ký</a>
                 @else
                     <a href="{{ route('ThongTinCaNhan.index') }}">@php echo "<i class="."fa-regular fa-user"."></i>".session()->get('TenTaiKhoan') @endphp</a>
@@ -45,11 +48,11 @@
         <div class="row" style="
         display: flex;
         align-items: center;">
-            <div class="col-3" style="text-align: center">
+            <div class="col-2" style="text-align: center">
                 <a href="{{ route('home') }}"><img style=" width: 190px" src="{{ asset('assets/images/logo.jpg') }}"
-                alt="LOGO"></a>
+                        alt="LOGO"></a>
             </div>
-            <div class="col-5">
+            <div class="col-6">
                 <nav class="navbar navbar-expand-lg">
                     <a class="navbar-brand" href="/">Trang chủ</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -61,18 +64,26 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a style="font-size: 20px" class="nav-link" href="{{ route('XemDanhMuc.index', ['id' => 1]) }}">
-                                    <i style="padding-right: 4px" class="fa-solid fa-mars"></i>Nam <input type="hidden" name="_token"
-                                        value="<?php echo csrf_token(); ?>"></a>
+                                <a style="font-size: 20px" class="nav-link"
+                                    href="{{ route('XemDanhMuc.index', ['id' => 1]) }}">
+                                    <i style="padding-right: 4px" class="fa-solid fa-mars"></i>Nam <input type="hidden"
+                                        name="_token" value="<?php echo csrf_token(); ?>"></a>
                             </li>
                             <li class="nav-item">
-                                <a style="font-size: 20px" class="nav-link" href="{{ route('XemDanhMuc.index', ['id' => 2]) }}">
-                                    <i style="padding-right: 4px" class="fa-solid fa-venus"></i>Nữ <input type="hidden" name="_token"
-                                        value="<?php echo csrf_token(); ?>"></a>
+                                <a style="font-size: 20px" class="nav-link"
+                                    href="{{ route('XemDanhMuc.index', ['id' => 2]) }}">
+                                    <i style="padding-right: 4px" class="fa-solid fa-venus"></i>Nữ <input type="hidden"
+                                        name="_token" value="<?php echo csrf_token(); ?>"></a>
                             </li>
                             <li class="nav-item">
-                                <a style="font-size: 20px" class="nav-link" href="{{ route('XemDanhMuc.index', ['id' => 3]) }}">
-                                    <i style="padding-right: 4px" class="fa-solid fa-child"></i>Trẻ em <input type="hidden" name="_token"
+                                <a style="font-size: 20px" class="nav-link"
+                                    href="{{ route('XemDanhMuc.index', ['id' => 3]) }}">
+                                    <i style="padding-right: 4px" class="fa-solid fa-child"></i>Trẻ em <input
+                                        type="hidden" name="_token" value="<?php echo csrf_token(); ?>"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a style="font-size: 20px" class="nav-link" href="{{ route('contact.contact') }}">
+                                    <i class="fa-solid fa-address-book"></i>Liên hệ <input type="hidden" name="_token"
                                         value="<?php echo csrf_token(); ?>"></a>
                             </li>
                         </ul>
@@ -83,7 +94,8 @@
                 <form action="{{ route('search-products') }}" method="get">
                     <div class="input-group">
                         <div class="form-outline">
-                            <input type="text" name="search" id="search" class="form-control" placeholder="Tìm kiếm..."/>
+                            <input type="text" name="search" id="search" class="form-control"
+                                placeholder="Tìm kiếm..." />
                         </div>
                         <button type="submit" class="btn btn-primary">
                             <i class="fas fa-search"></i>
@@ -91,25 +103,25 @@
                     </div>
                 </form>
             </div>
-            <div class="col-1">
+            <div class="col-2">
                 <a href="{{ route('giohang') }}"><i class="fa-solid fa-cart-shopping GH">
-                    @php
-                        if (session()->has('TenTaiKhoan')) {
-                            $loaigio = 'GH';
-                        } else {
-                            $loaigio = 'cart';
-                        }
-                    @endphp
-                    @if (Session($loaigio) != null)
-                        <div class="carthover">
-                            @if (session($loaigio))
-                                @php echo count(Session::get($loaigio, array())); @endphp
-                            @endif
-                        </div>
-                    @else
-                        <div class="carthover" style="display: none"></div>
-                    @endif
-                </i></a>
+                        @php
+                            if (session()->has('TenTaiKhoan')) {
+                                $loaigio = 'GH';
+                            } else {
+                                $loaigio = 'cart';
+                            }
+                        @endphp
+                        @if (Session($loaigio) != null)
+                            <div class="carthover">
+                                @if (session($loaigio))
+                                    @php echo count(Session::get($loaigio, array())); @endphp
+                                @endif
+                            </div>
+                        @else
+                            <div class="carthover" style="display: none"></div>
+                        @endif
+                    </i></a>
             </div>
         </div>
     </header>
@@ -208,7 +220,7 @@
                     <!-- Grid column -->
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                         <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <h6 class="text-uppercase fw-bold mb-4">Liên hệ</h6>
                         <p><i class="fas fa-home me-3"></i> Bắc Từ Liêm - Hà Nội</p>
                         <p>
                             <i class="fas fa-envelope me-3"></i>
@@ -230,12 +242,15 @@
         </div>
         <!-- Copyright -->
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
-        integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"
-        integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
+    </script>
 </body>
 @yield('scripts')
 

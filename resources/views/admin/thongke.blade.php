@@ -53,17 +53,17 @@
 					<form action="" style="width: 100%;">
 						<div class="statistic-option">
 
-							<input type="radio" name="option" id="day_opt" 
+							<input type="radio" name="option" id="day_opt"
 							<?php if (!empty($_GET['option']) && $_GET['option']=='1') echo 'checked'; ?> onclick="ThongKeNgay();" value="1">
 							<label for="day_opt">Thống kê theo ngày</label>
-							
 
-							<input type="radio" name="option" id="month_opt" 
+
+							<input type="radio" name="option" id="month_opt"
 							<?php if (!empty($_GET['option']) && $_GET['option']=='2') echo 'checked'; else if (empty($_GET['option'])) echo 'checked'; ?> onclick="ThongKeThang();" value="2">
 							<label for="month_opt">Thống kê theo tháng</label>
-							
 
-							<input type="radio" name="option" id="year_opt" 
+
+							<input type="radio" name="option" id="year_opt"
 							<?php if (!empty($_GET['option']) && $_GET['option']=='3') echo 'checked'; ?> onclick="ThongKeNam();" value="3">
 							<label for="year_opt">Thống kê theo năm</label>
 
@@ -113,7 +113,7 @@
 							<button type="submit" class="btn_TK">Thống kê</button>
 						</div>
 					</form>
-					
+
                     <div id="chart"></div>
                 </div>
 			</div>
@@ -130,10 +130,10 @@
     }
     </script>
 
-	
+
 	<script type="text/javascript">
 		window.onload = function () {
-			
+
 			var from_date = document.getElementById("from_date");
 			var to_date = document.getElementById("to_date");
 			if (from_date.value == ''){
