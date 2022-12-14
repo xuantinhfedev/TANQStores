@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    background-color: azure;
+    position: relative;
+  }
+  header{
+    width: 100%;
+    height: 100px;
+    background-color: red;
+    display: flex;
+  }
+  .mainlayout{
+    width: 100%;
+    height: 900px;
+    background-color: rgb(240, 234, 234);
+    display: flex;
+  }
+  .nav, .banner{
+    height: 100%;
+    width: 15%;
+    background-color: rgb(15, 18, 48);
+  }
+  .image_banner{
+    width: 100%;
+    height: 100%;
+  }
+  .banner_font{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 30px;
+    color: #f9f9f9;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  .content_header{
+    width: 85%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+  }
+  .account{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  .image_acc{
+    clip-path: circle();
+    width: 60px;
+    height: 60px;
+  }
+  .name_acc{
+    width: 8%;
+    font-size: 16px;
+    padding-left: 10px;
+  }
+  .info_acc{
+    list-style-type: none;
+    display: none;
+    position: absolute;
+    left: 93%;
+    padding: 10px;
+    color: wheat;
+    background-color: rgb(166, 163, 163);
+  }
+  .info_acc li{
+    padding: 3px;
+  }
+  .name_acc:hover .info_acc{
+    display: block;
+    cursor: pointer;
+  }
+  .name_acc .info_acc:hover li{
+    color: rgb(47, 13, 13);
+    cursor: pointer;
+  }
+  .main_select li{
+    padding-left: 20px;
+    line-height: 45px;
+    font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+  }
+  .main_select li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+  }
+  .main_select li i{
+    padding-right: 10px;
+    font-size: 20px;
+    width: 24px;
+  }
+  .main_select li:hover{
+    background-color: #1f3684;
+    cursor: pointer;
+  }
+  .container{
+    width: 85%;
+  }
+  .maincontent{
+    margin: 20px;
+    width: 98%;
+
+    background-color: #ffffff;
+    min-height: 600px;
+  }
+  .content{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .dashboard_content{
+    margin-top: 10px;
+    width: 30%;
+    height: 90%;
+  }
+  .QLSP{
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: space-around;
+    background-color: blanchedalmond;
+  }
+  .cha_TK{
+    position: relative;
+  }
+  .con_TK{
+    position: absolute;
+    list-style-type: none;
+    width: 100%;
+    top: 100%;
+    left: 0%;
+    display: none;
+    background-color: #091023;
+  }
+  .con_TK li{
+    color: #a5a69b;
+  }
+  .cha_TK:hover{
+    color: #a5a69b;
+    cursor: pointer;
+  }
+  .cha_TK:hover .con_TK{
+    display: block;
+    cursor: pointer;
+  }
+  .con_TK li:hover{
+    color: #f9f9f9;
+    cursor: pointer;
+  }
+  .maincontent h1{
+      margin-bottom: 10px;
+      text-align: center;
+  }
+  .customer-info{
+      width: 95%;
+      margin: auto;
+      margin-bottom: 20px;
+  }
+  .customer-info table{
+    width: 100%;
+  }
+  .customer-info table th{
+    text-align: left;
+    padding: 5px;
+  }
+  .customer-info table td{
+    padding: 5px;
+  }
+  .user-list{
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+    text-align: center;
+}
+  .table-list{
+    width: 95%;
+    margin: auto;
+  }
+  .user-list th{
+      padding: 5px;
+  }
+  .user-list td{
+      padding: 5px;
+  }
+  .btn-add{
+    background-color: #3366ff;
+    border-radius: 3px;
+    width: 130px;
+    height: 30px;
+    border: none;
+    margin-top: 80px;
+    font-size: 14px;
+  }
+  .btn-add:hover{
+    opacity: 90%;
+  }
+  .btn-add a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    line-height: 30px;
+  }
+  .back-to-list{
+    text-decoration: none;
+    display: inline-block;
+    color: #139ddd;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  .back-to-list:hover{
+    color: black;
+    transition: all 0.3s ease-in-out;
+  }
+  .message{
+    width: 95%;
+    height: 50px;
+    margin: auto;
+    line-height: 50px;
+    font-size: 18px;
+    background-color: rgb(215, 250, 229);
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 30px;
+  }
+  .order-status{
+    width: 300px;
+    position: absolute;
+    right: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .status{
+    width: 200px;
+    height: 30px;
+    font-size: 16px;
+    padding-left: 10px;
+    margin-top: 5px;
+  }
+  .btn-status{
+    width: 50px;
+    height: 30px;
+    border: none;
+    background-color:#ffcc00;
+    border-radius: 3px;
+    font-weight: bold;
+  }
+  .btn-status:hover{
+    opacity: 70%;
+    cursor: pointer;
+  }

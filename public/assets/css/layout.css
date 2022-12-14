@@ -1,0 +1,254 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: Arial;
+}
+header{
+    width: 100%;
+    height: 170px;
+    border-bottom: 1px solid rgb(156, 153, 153);
+}
+.htren{
+    width: 100%;
+    height: 25%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+.hotline{
+    width: 20%;
+    height: 40px;
+    line-height: 40px;
+}
+.checking-order{
+    width: 70%;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+}
+.checking-order a{
+    text-decoration: none;
+    color: white;
+}
+.checking-order a:hover{
+    color: grey;
+}
+.htren p{
+    color: white;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+}
+.login{
+    display: flex;
+    width: 20%;
+    height: 40px;
+    line-height: 40px;
+    justify-content: flex-end;
+}
+.login a ,pre{
+    text-decoration: none;
+    color: white;
+    margin: 0;
+    padding-right: 15px;
+}
+.login a:hover{
+    color: grey;
+}
+.hduoi{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hduoi img{
+    width: 50%;
+    height: 100%;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+}
+nav>ul>li>a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    line-height: 35px;
+    margin-right: 60px;
+    font-size: 20px;
+}
+nav>ul>li>a:hover{
+    color:red;
+}
+li>ul>li>a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    line-height: 45px;
+    width: 200px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+li>ul>li>a:hover{
+    color: red;
+}
+ul>li{
+    position: relative;
+}
+ul>li>ul>li{
+    margin-bottom: 10px;
+}
+ul>li>ul{
+    position: absolute;
+    display: inline;
+    background-color: white;
+    top: 33px;
+    left: -1px;
+    visibility: hidden;
+}
+nav>ul>.nam:hover > .namnam{
+    visibility: visible;
+}
+nav>ul>.nu:hover > .nunu{
+    visibility: visible;
+}
+.search>form{
+    position: relative;
+}
+.search>form>button{
+    position: absolute;
+    border: none;
+    background: none;
+    font-size: 20px;
+    top: 6px;
+    left: 5px;
+}
+.search>form>input{
+    height: 30px;
+    border-radius: 20px;
+    width: 270px;
+    font-size: 20px;
+    padding-left: 40px;
+}
+.acc_cart{
+    margin-right: 20px;
+    position: relative;
+}
+.acc{
+    font-size: 25px;
+    color: black;
+    border: solid;
+    border-radius: 100%;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+.acc_cart>a>div{
+    margin-top: 5px;
+}
+.fa-cart-shopping{
+    color: rgb(255, 162, 49);
+    font-size: 30px;
+    margin-left: 10px;
+}
+.hduoi>img{
+    margin-left: 20px;
+}
+.acc:hover{
+    color: rgb(138, 135, 135);
+}
+
+
+p{
+    margin: 0;
+}
+
+
+
+.LOGO img{
+    height: 150px;
+}
+footer{
+    height: 260px;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid rgb(156, 153, 153);
+    margin-top: 10px;
+}
+.container_footer{
+    display: flex;
+    height: 260px;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.copyright{
+    text-align: center;
+    background-color: black;
+    line-height: 55px;
+    color: aliceblue;
+
+}
+.bold{
+    font-weight: bold;
+}
+footer p{
+    font-size: 20px;
+}
+.acc{
+    position: relative;
+}
+.footer-option{
+    font-size: 17px;
+    padding: 5px 0;
+}
+
+
+
+.carthover{
+    background-color: rgb(249, 97, 97);
+    color: azure;
+    width: 50%;
+    height:50%;
+    font-size: 15px;
+    clip-path: ellipse(50% 50% at center);
+    position: absolute;
+    text-align: center;
+    top: -10%;
+    right: -20%;
+}
+#slideshow {
+    overflow: hidden;
+    height: 510px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .slide-wrapper {
+    width: 2912px;
+    -webkit-animation: slide 14s ease infinite;
+  }
+  
+  .slide {
+    float: left;
+    height: 510px;
+    width: 728px;
+  }
+  
+  
+  @-webkit-keyframes slide {
+    20% {margin-left: 0px;}
+    30% {margin-left: -100px;}
+    50% {margin-left: -728px;}
+    60% {margin-left: -1456px;}
+    80% {margin-left: -1456px;}
+  }
+
+  .title0{
+    padding: 20px 0;
+  }
+ 

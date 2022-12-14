@@ -1,0 +1,476 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: Arial;
+}
+header{
+    width: 100%;
+    height: 170px;
+}
+.htren{
+    width: 100%;
+    height: 25%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+.hotline{
+    width: 20%;
+    height: 40px;
+    line-height: 40px;
+}
+.checking-order{
+    width: 70%;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+}
+.checking-order a{
+    text-decoration: none;
+    color: white;
+}
+.checking-order a:hover{
+    color: grey;
+}
+.htren p{
+    color: white;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+}
+.login{
+    display: flex;
+    width: 20%;
+    height: 40px;
+    line-height: 40px;
+    justify-content: flex-end;
+}
+.login a ,pre{
+    text-decoration: none;
+    color: white;
+    margin: 0;
+    padding-right: 15px;
+}
+.login a:hover{
+    color: grey;
+}
+.hduoi{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hduoi img{
+    width: 50%;
+    height: 100%;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+}
+nav>ul>li>a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    line-height: 35px;
+    margin-right: 60px;
+    font-size: 20px;
+}
+nav>ul>li>a:hover{
+    color:red;
+}
+li>ul>li>a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    line-height: 45px;
+    width: 200px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+li>ul>li>a:hover{
+    color: red;
+}
+ul>li{
+    position: relative;
+}
+ul>li>ul>li{
+    margin-bottom: 10px;
+}
+ul>li>ul{
+    position: absolute;
+    display: inline;
+    background-color: white;
+    top: 33px;
+    left: -1px;
+    visibility: hidden;
+}
+nav>ul>.nam:hover > .namnam{
+    visibility: visible;
+}
+nav>ul>.nu:hover > .nunu{
+    visibility: visible;
+}
+.search>form{
+    position: relative;
+}
+.search>form>button{
+    position: absolute;
+    border: none;
+    background: none;
+    font-size: 20px;
+    top: 6px;
+    left: 5px;
+}
+.search>form>input{
+    height: 30px;
+    border-radius: 20px;
+    width: 270px;
+    font-size: 20px;
+    padding-left: 40px;
+}
+.acc_cart{
+    margin-right: 20px;
+}
+.acc{
+    font-size: 25px;
+    color: black;
+    border: solid;
+    border-radius: 100%;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+.acc:hover{
+    color: red;
+}
+.acc_cart>a>div{
+    margin-top: 5px;
+}
+.fa-cart-shopping{
+    color: rgb(255, 162, 49);
+    font-size: 30px;
+    margin-left: 10px;
+}
+.cart{
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.cart-title{
+    text-align: center;
+    margin: auto;;
+}
+.empty-cart{
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+}
+.empty-cart p{
+    font-size: 18px;
+}
+.empty-cart button{
+    background-color: #ef5b5b;
+    border: none;
+    width: 200px;
+    height: 36px;
+}
+.empty-cart button a{
+    text-decoration: none;
+    display: block;
+    color: white;
+    font-size: 20px;
+    padding: 0px;
+}
+.empty-cart button:hover{
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+.cart-item{
+    width: 40%;
+    margin-top: 0px;
+}
+.cart-item table{
+    margin-top: 10px;
+    width: 100%;
+    border-left: solid 1px;
+    border-left-color: #828181;
+}
+.cart-item table th{
+    font-size: 15px;
+}
+.cart-item table td{
+    padding: 10px;
+    margin-top: 10px;
+}
+.cart-image{
+    display: flex;
+    justify-content: center;
+}
+.cart-image img{
+    width: 100%;
+}
+.item-name{
+    display: block;
+}
+.item-name>a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+.item-name>a:hover{
+    color: red;
+    transition: all 0.3s ease-in-out;
+}
+.item-infor{
+    display: flex;
+    margin-top: 10px;
+    line-height: 25px;
+}
+.color{
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: 10px;
+}
+.size{
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: 10px;
+}
+.item-color{
+    width: 25px;
+    height: 25px;
+    background-color: gray;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.item-size{
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid black;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+.btn-delete{
+    margin-left: 10px;
+}
+.btn-delete a{
+    text-decoration: none;
+    color: black;
+}
+.btn-delete a:hover{
+    color: red;
+    transition: all 0.3s ease-in-out;
+}
+.btn-delete i{
+    font-size: 18px;
+    margin-top: 5px;
+}
+.item-quantity{
+    text-align: center;
+}
+.item-quantity input{
+    width: 50px;
+    height: 30px;
+    font-size: 18px;
+    padding-left: 10px;
+}
+.item-price{
+    font-size: 18px;
+    text-align: right;
+}
+.item-total{
+    font-size: 18px;
+    text-align: right;
+    color: red;
+}
+.cart-pay{
+    margin-top: 30px;
+    display: flex;
+}
+.shop-support{
+    width: 50%;
+    line-height: 25px;
+}
+.buy-more{
+    width: 35%;
+    text-decoration: none;
+    display: inline-block;
+    color: #139ddd;
+    font-size: 18px;
+}
+.buy-more:hover{
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+.shop-contact{
+    margin-top: 20px;
+}
+.shop-contact ul{
+    list-style-position: inside;
+}
+.shop-contact .phone-number{
+    font-size: 18px;
+    color: #034ea1;
+}
+.shop-contact .email{
+    font-size: 18px;
+    color: #034ea1;
+}
+.user-total-price{
+    width: 50%;
+}
+.total-price{
+    text-align: right;
+    font-size: 20px;
+}
+.user-pay{
+    text-align: right;
+    margin-top: 20px;
+}
+.user-pay input{
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    background-color: #e34848;
+    color: white;
+    border: none;
+}
+.user-pay input:hover{
+    background-color: black;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.LOGO img{
+    height: 150px;
+}
+footer{
+    height: 260px;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid rgb(156, 153, 153);
+    margin-top: 10px;
+}
+.container_footer{
+    display: flex;
+    height: 260px;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.copyright{
+    text-align: center;
+    background-color: black;
+    line-height: 55px;
+    color: aliceblue;
+
+}
+.bold{
+    font-weight: bold;
+}
+footer p{
+    font-size: 20px;
+}
+header{
+    border-bottom:1px solid #ddd;
+}
+.acc{
+    position: relative;
+}
+.loguot{
+    position: absolute;
+    background-color: white;
+    width: 100px;
+    line-height: 30px;
+    text-align: center;
+    top: 90%;
+    left: -45%;
+    display: none;
+    border: 1px solid #828181;
+}
+.loguot:hover{
+    background-color: #d5cece;
+    cursor: pointer;
+}
+.acc:hover .loguot{
+    display: block;
+}
+.GH{
+    position: relative;
+}
+.carthover{
+    background-color: rgb(249, 97, 97);
+    color: azure;
+    width: 50%;
+    height:50%;
+    font-size: 15px;
+    clip-path: ellipse(50% 50% at center);
+    position: absolute;
+    text-align: center;
+    top: -10%;
+    right: -20%;
+}
+.SoLuong{
+    position: relative;
+}
+.slKhongHopLe{
+    position: absolute;
+    color: rgb(244, 49, 49);
+}
+.thongTinGiaoHang{
+    width: 60%;
+}
+.title1{
+    height: 30px;
+    font-size: 26px;
+    padding: 10px 0px;
+    background-color: #858484;
+    color: white;
+    margin-right: 5px;
+    padding-left: 20px;
+}
+.title2{
+    height: 30px;
+    font-size: 26px;
+    padding: 10px 0px;
+    background-color: #858484;
+    color: white;
+    margin-left: 5px;
+    padding-left: 20px;
+}
+.inforGiaoHang table{
+    width: 100%;
+    margin-top: 20px;
+}
+.inforGiaoHang table input{
+    width: 70%;
+    margin: 20px 0px 10px 20px;
+    height: 30px;
+    border-radius: 0;
+    font-size: 15px;
+}
+.thanhToan input{
+    height: 65px;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 25px;
+    border: none;
+    background-color: #af0000;
+    color: white;
+}
+.thanhToan input:hover{
+    background-color: red;
+}
+.alert{
+    color: red;
+}
