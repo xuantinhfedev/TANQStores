@@ -13,6 +13,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>XUNA SHOP</title>
 </head>
 
@@ -126,8 +129,36 @@
         </div>
     </header>
 
-
-
+    <style>
+        .img-fill {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <div class="row row-height">
+        <div id="slideshow" class="carousel slide carousel-width" data-bs-ride="carousel">
+            <div class="carousel-inner slide-show__contain">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="img-fill" src="{{ asset('assets/images/bananas2.jpg') }}">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="img-fill" src="{{ asset('assets/images/bananas1.jpg') }}">
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev btn-prev" type="button" data-bs-target="#slideshow"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next btn-next" type="button" data-bs-target="#slideshow"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
 
     <div class="container">
         <div class="row">
@@ -250,6 +281,27 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
+    </script>
+
+
+    <script>
+        // Clients carousel (uses the Owl Carousel library)
+        $(".clients-carousel").owlCarousel({
+            autoplay: true,
+            dots: false,
+            loop: true,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                768: {
+                    items: 4
+                },
+                900: {
+                    items: 6
+                }
+            }
+        });
     </script>
 </body>
 @yield('scripts')
