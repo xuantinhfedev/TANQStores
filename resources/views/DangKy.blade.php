@@ -4,10 +4,10 @@
     <link rel="stylesheet" href="{{ asset('assets/css/DangKy.css')}}">
 
     <section>
-        <form action="/DangKyinfo" method="post">
+        <form action="/DangKyinfo" method="post" id="dangky">
             <table>
 
-                <caption><h2>Đăng ký tài khoản</h2></caption>
+                <h2>Đăng ký tài khoản</h2>
                 <tr>
                     <td><label for="name">Họ và tên</label></td>
                     <td><input type="text" name="fullname"></td>

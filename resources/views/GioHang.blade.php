@@ -86,7 +86,7 @@
             <hr style="margin-top: 30px;">
             <div class="cart-pay">
                 <div class="shop-support">
-                    <a href="index.html" class="buy-more">
+                    <a href="{{ route('home') }}" class="buy-more">
                         <i class="fa-solid fa-circle-arrow-left"></i>
                         Tiếp tục mua hàng
                     </a>
@@ -111,7 +111,7 @@
                         <strong>Tạm Tính: <span style="color: red;">{{$total }}đ</span></strong>
                     </div>
                     <div class="user-pay">
-                        <a href="{{route('ThanhToan.index')}}"><input type="button" value="Đặt hàng"></a>
+                        <a href="{{route('ThanhToan.index')}}"><input id="dathang" type="button" value="Đặt hàng"></a>
                     </div>
                 </div>
             </div>

@@ -302,7 +302,7 @@ nav>ul>.nu:hover > .nunu{
     line-height: 25px;
 }
 .buy-more{
-    width: 35%;
+    /* width: 35%; */
     text-decoration: none;
     display: inline-block;
     color: #139ddd;
@@ -341,12 +341,14 @@ nav>ul>.nu:hover > .nunu{
     width: 200px;
     height: 40px;
     font-size: 20px;
-    background-color: #e34848;
-    color: white;
-    border: none;
+    
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
 }
 .user-pay input:hover{
     background-color: black;
+    color: #fff;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
@@ -370,4 +372,3 @@ nav>ul>.nu:hover > .nunu{
 .table1 tr{
     border-bottom: 1px solid #000;
 }
-

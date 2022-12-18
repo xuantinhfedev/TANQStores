@@ -280,10 +280,11 @@ nav>ul>.nu:hover > .nunu{
     text-align: center;
 }
 .item-quantity input{
-    width: 50px;
+    width: 33px;
     height: 30px;
-    font-size: 18px;
-    padding-left: 10px;
+    font-size: 15px;
+    padding-left: 8px;
+    border: 1px solid #000;
 }
 .item-price{
     font-size: 18px;
@@ -433,11 +434,12 @@ header{
 .title1{
     height: 30px;
     font-size: 26px;
-    padding: 10px 0px;
+    padding: 30px 0px;
     background-color: #858484;
     color: white;
     margin-right: 5px;
     padding-left: 20px;
+    line-height: 7px;
 }
 .title2{
     height: 30px;
@@ -455,7 +457,7 @@ header{
 .inforGiaoHang table input{
     width: 70%;
     margin: 20px 0px 10px 20px;
-    height: 30px;
+    height: 40px;
     border-radius: 0;
     font-size: 15px;
 }

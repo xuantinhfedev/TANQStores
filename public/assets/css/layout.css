@@ -210,16 +210,16 @@ footer p{
 
 
 .carthover{
-    background-color: rgb(249, 97, 97);
-    color: azure;
-    width: 50%;
-    height:50%;
-    font-size: 15px;
+    background-color: red;
+    color: #fff;
+    width: 1%;
+    height: 2%;
+    font-size: 13px;
     clip-path: ellipse(50% 50% at center);
     position: absolute;
     text-align: center;
-    top: -10%;
-    right: -20%;
+    top: 11%;
+    right: 12%;
 }
 #slideshow {
     overflow: hidden;

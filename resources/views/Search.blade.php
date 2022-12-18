@@ -28,7 +28,7 @@
                         @endif
                     @endforeach
                     <div class="view-more">
-                        <a href="#"><button>VIEW MORE PRODUCTS</button></a>
+                        <a href="#"><button>XEM THÊM SẢN PHẨM</button></a>
                     </div>
                 @endif
             </div>

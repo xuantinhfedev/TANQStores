@@ -217,8 +217,11 @@ p{
     color: white;
     font-size: 15px;
     width: 230px;
+    border-radius: 15px;
 }
 .view-more button:hover{
-    opacity: 80%;
+    color: #fff;
+    background-color: #000;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
