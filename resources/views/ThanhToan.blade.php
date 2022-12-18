@@ -104,7 +104,7 @@
                         @enderror
                     </tr>
                     <tr>
-                        <td style="padding-left:20px;height: 30px;font-size: 15px;"><b>HÌNH THỨC VẬN CHUYỂN:</b><b>COD (giao hàng thanh toán)</b></td>
+                        <td style="padding-left:20px;height: 30px;font-size: 15px;"><b>HÌNH THỨC VẬN CHUYỂN: </b><b>COD (Thanh toán khi nhận hàng)</b></td>
                     </tr>
                 </table>
                 @endif

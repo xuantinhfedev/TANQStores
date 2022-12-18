@@ -5,7 +5,7 @@
     <section>
         <form action="/DangNhap/Auth" id="dangNhap" method="post">
             <table>
-                <caption><h2>Đăng nhập</h2></caption>
+                <h2>Đăng nhập</h2>
                 <tr>
                     <td>
                         <div class="icon_form"><i class="fa-solid fa-user"></i></div>

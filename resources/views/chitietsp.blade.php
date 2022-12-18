@@ -57,11 +57,11 @@
                     {{-- onclick="window.location='{{ route('giohang') }}'" --}}
                     <div class="btn">
 
-                        <input class="themVaoGio" style="background-color: #e34848; border: none; width: 100%;" type="submit" value=" ĐẶT HÀNG NGAY">
+                        <input class="themVaoGio" style="background-color: #e34848; border: none; width: 400px;" type="submit" value=" ĐẶT HÀNG NGAY">
 
                     </div>
             </form>
-            <button class="themVaoGio" onclick="ThemGHMOI()" style="margin-top: 5px;width: 100%;" >THÊM VÀO GIỎ</button>
+            <button class="themVaoGio" onclick="ThemGHMOI()" style="margin-top: 5px; margin-left: 13px;width: 400px;" >THÊM VÀO GIỎ</button>
         </div>
 
         <div class="alert-green hide">

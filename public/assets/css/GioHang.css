@@ -302,7 +302,7 @@ nav>ul>.nu:hover > .nunu{
     line-height: 25px;
 }
 .buy-more{
-    width: 35%;
+    /* width: 35%; */
     text-decoration: none;
     display: inline-block;
     color: #139ddd;
