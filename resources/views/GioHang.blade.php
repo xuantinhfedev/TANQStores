@@ -86,10 +86,10 @@
             <hr style="margin-top: 30px;">
             <div class="cart-pay">
                 <div class="shop-support">
-                    <a href="index.html" class="buy-more">
+                    {{-- <a href="index.html" class="buy-more">
                         <i class="fa-solid fa-circle-arrow-left"></i>
                         Tiếp tục mua hàng
-                    </a>
+                    </a> --}}
 
                     <div class="shop-contact">
                         <p>Để nhận tư vấn hoặc hỗ trợ khi phát sinh khó khăn trong lúc mua hàng, hãy liên hệ với XUNA chúng mình thông qua:</p>
