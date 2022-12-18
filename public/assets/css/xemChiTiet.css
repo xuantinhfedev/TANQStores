@@ -1,0 +1,290 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: Arial;
+}
+header{
+    width: 100%;
+    height: 170px;
+}
+.htren{
+    width: 100%;
+    height: 25%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+.hotline{
+    width: 20%;
+    height: 40px;
+    line-height: 40px;
+}
+.checking-order{
+    width: 70%;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+}
+.checking-order a{
+    text-decoration: none;
+    color: white;
+}
+.checking-order a:hover{
+    color: grey;
+}
+.htren p{
+    color: white;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+}
+.login{
+    display: flex;
+    width: 20%;
+    height: 40px;
+    line-height: 40px;
+    justify-content: flex-end;
+}
+.login a ,pre{
+    text-decoration: none;
+    color: white;
+    margin: 0;
+    padding-right: 15px;
+}
+.login a:hover{
+    color: grey;
+}
+.hduoi{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hduoi img{
+    width: 50%;
+    height: 100%;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+}
+nav>ul>li>a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    line-height: 35px;
+    margin-right: 60px;
+    font-size: 20px;
+}
+nav>ul>li>a:hover{
+    color:red;
+}
+li>ul>li>a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    line-height: 45px;
+    width: 200px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+li>ul>li>a:hover{
+    color: red;
+}
+ul>li{
+    position: relative;
+}
+ul>li>ul>li{
+    margin-bottom: 10px;
+}
+ul>li>ul{
+    position: absolute;
+    display: inline;
+    background-color: white;
+    top: 33px;
+    left: -1px;
+    visibility: hidden;
+}
+nav>ul>.nam:hover > .namnam{
+    visibility: visible;
+}
+nav>ul>.nu:hover > .nunu{
+    visibility: visible;
+}
+.search>form{
+    position: relative;
+}
+.search>form>button{
+    position: absolute;
+    border: none;
+    background: none;
+    font-size: 20px;
+    top: 6px;
+    left: 5px;
+}
+.search>form>input{
+    height: 30px;
+    border-radius: 20px;
+    width: 270px;
+    font-size: 20px;
+    padding-left: 40px;
+}
+.acc_cart{
+    margin-right: 20px;
+}
+.acc{
+    font-size: 25px;
+    color: black;
+    border: solid;
+    border-radius: 100%;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+.acc:hover{
+    color: red;
+}
+.acc_cart>a>div{
+    margin-top: 5px;
+}
+.fa-cart-shopping{
+    color: rgb(255, 162, 49);
+    font-size: 30px;
+    margin-left: 10px;
+}
+.cart{
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.cart-title{
+    text-align: center;
+    margin: auto;;
+}
+footer{
+    display: flex;
+    height: 260px;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid;
+    margin-top: 10px;
+}
+.bold{
+    font-weight: bold;
+}
+footer p{
+    font-size: 20px;
+}
+.chiTietSP{
+    display: flex;
+}
+.img_sp{
+    width: 60%;
+}
+
+.small_img{
+    display: flex;
+    justify-content:space-around;
+}
+.big_img img{
+    width: 100%;
+}
+.small_img img{
+    width: 25%;
+}
+.img_sp{
+    padding: 10px;
+}
+.info_sp{
+    width: 40%;
+    padding: 10px;
+}
+.name{
+    height: 10%;
+}
+.maSP{
+    height: 10%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.maSP p{
+    font-size: 21px;
+}
+.maSP span{
+    font-size: 21px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.moTa{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px grey dotted;
+    border-bottom: 1px grey dotted;
+}
+.moTa p{
+    font-size: 18px;
+    text-align: justify;
+}
+.size_soLuong{
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+.size{
+    width: 45%;
+}
+.soLuong{
+    width: 45%;
+}
+.soLuong input{
+    height: 50px;
+    width: 100%;
+    border-radius: 0;
+    font-size: 17px;
+    border:0.5px grey dotted;
+}
+.size select{
+    height: 50px;
+    width: 100%;
+    border-radius: 0;
+    font-size: 17px;
+}
+.btn{
+    height: 40%;
+    margin-top: 50px;
+}
+.themVaoGio button{
+    height: 70px;
+    width: 100%;
+    font-size: 25px;
+    border: none;
+    border-radius: 0;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+.thanhToan{
+    margin-top: 20px;
+}
+.thanhToan button{
+    height: 70px;
+    width: 100%;
+    font-size: 25px;
+    border: none;
+    border-radius: 0;
+    background-color: rgb(169 25 25);
+    color: white;
+    font-weight: bold;
+}
+.btn button:hover{
+    opacity: 60%;
+}

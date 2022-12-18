@@ -1,0 +1,382 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: Montserrat,Arial,Tahoma,Verdana,sans-serif;
+}
+header{
+    width: 100%;
+    height: 170px;
+}
+.htren{
+    width: 100%;
+    height: 25%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+.hotline{
+    width: 20%;
+    height: 40px;
+    line-height: 40px;
+}
+.checking-order{
+    width: 70%;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+}
+.checking-order a{
+    text-decoration: none;
+}
+.checking-order a p:hover{
+    color: grey;
+}
+.htren p{
+    color: white;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+}
+.login{
+    display: flex;
+    width: 20%;
+    height: 40px;
+    line-height: 40px;
+    justify-content: flex-end;
+}
+.login a ,pre{
+    text-decoration: none;
+    color: white;
+    margin: 0;
+    padding-right: 15px;
+}
+.login a:hover{
+    color: grey;
+}
+.hduoi{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hduoi img{
+    width: 50%;
+    height: 100%;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+}
+nav>ul>li>a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    line-height: 35px;
+    margin-right: 60px;
+    font-size: 20px;
+}
+nav>ul>li>a:hover{
+    color:red;
+}
+li>ul>li>a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    line-height: 45px;
+    width: 200px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+li>ul>li>a:hover{
+    color: red;
+}
+ul>li{
+    position: relative;
+}
+ul>li>ul>li{
+    margin-bottom: 10px;
+}
+ul>li>ul{
+    position: absolute;
+    display: inline;
+    background-color: white;
+    top: 33px;
+    left: -1px;
+    visibility: hidden;
+}
+nav>ul>.nam:hover > .namnam{
+    visibility: visible;
+    z-index: 100;
+}
+nav>ul>.nu:hover > .nunu{
+    visibility: visible;
+    z-index: 100;
+}
+.search>form{
+    position: relative;
+}
+.search>form>button{
+    position: absolute;
+    border: none;
+    background: none;
+    font-size: 20px;
+    top: 6px;
+    left: 5px;
+}
+.search>form>input{
+    height: 30px;
+    border-radius: 20px;
+    width: 270px;
+    font-size: 20px;
+    padding-left: 40px;
+}
+.acc_cart{
+    margin-right: 20px;
+}
+.acc{
+    font-size: 25px;
+    color: black;
+    border: solid;
+    border-radius: 100%;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+.acc_cart>a>div{
+    margin-top: 5px;
+}
+.fa-cart-shopping{
+    color: rgb(255, 162, 49);
+    font-size: 30px;
+    margin-left: 10px;
+}
+.hduoi>img{
+    margin-left: 20px;
+}
+.acc:hover{
+    color: red;
+}
+.content{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 50px;
+}
+.filters{
+    width: 25%;
+    display: block;
+}
+.size-filter{
+    height: 200px;
+}
+.size-filter p{
+    font-size: 20px;
+}
+.size ul{
+    display: block;
+}
+.size li{
+    width: 43px;
+    height: 43px;
+    line-height: 43px;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    float: left;
+    text-align: center;
+    padding: 0;
+    display: block;
+}
+.size li a{
+    display: block;
+    text-decoration: none;
+    color: black
+}
+.size li a:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.color-filter{
+    margin-bottom: 50px;
+
+}
+.color-boxes{
+    display: flex;
+}
+.color-filter p{
+    font-size: 20px;
+}
+.color-box{
+    font-size: 11px;
+    display: block;
+    height: 25px;
+    width: 25px;
+    line-height: 18px;
+    border-radius: 50%;
+    margin: 5px;
+}
+.price-filter p{
+    font-size: 20px;
+}
+.price-scope{
+    line-height: 25px;
+}
+.price-scope input{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin: 0 5px 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background: #ffffff;
+    vertical-align: middle;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
+}
+.price-scope input:hover{
+    cursor: pointer;
+}
+.price-scope label:hover{
+    cursor: pointer;
+}
+.product{
+    width: 75%;
+}
+.title0 p{
+    text-align: center;
+    font-size: 35px;
+    margin: 20px 0px;
+}
+.danhmuc{
+    margin-bottom: 10px;
+}
+.danhmuc>ul{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    height: 50px;
+}
+.danhmuc>ul>li{
+    width: 20%;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    height: 50px;
+}
+.danhmuc>ul>li>a{
+    text-decoration: none;
+    color: black;
+    line-height: 50px;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+}
+.danhmuc>ul>li>a:hover{
+    color: red;
+    background-color: #f2f2f2;
+    transition: all 0.3s ease-in-out;
+}
+.hang{
+    display: flex;
+    justify-content: space-between;
+}
+.cot{
+    width: 24%;
+    justify-content: space-between;
+}
+.cot a img{
+    width: 100%;
+    height: 240px;
+}
+.cot a{
+    text-decoration: none;
+    color: black;
+}
+.tensp{
+    font-size: 18px;
+    text-align: center;
+}
+.tensp:hover{
+    color: red;
+}
+p{
+    margin: 0;
+}
+.price{
+    text-align: center;
+    color: red;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.view-more{
+    text-align: center;
+    margin: 25px 0;
+}
+.view-more button{
+    height: 55px;
+    border: none;
+    background-color: #e34444;
+    color: white;
+    font-size: 15px;
+    width: 230px;
+}
+.view-more button:hover{
+    opacity: 80%;
+    cursor: pointer;
+}
+.title2 img{
+    width: 100%;
+}
+.title3{
+    display: flex;
+    background-color: black;
+    color: white;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.fb{
+    display: flex;
+}
+.fb img{
+    width: 158px;
+}
+.LOGO img{
+    height: 150px;
+}
+footer{
+    display: flex;
+    height: 260px;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid;
+    margin-top: 10px;
+}
+.bold{
+    font-weight: bold;
+}
+footer p{
+    font-size: 20px;
+}
+.GH{
+    position: relative;
+}
+.carthover{
+    background-color: rgb(249, 97, 97);
+    color: azure;
+    width: 50%;
+    height:50%;
+    font-size: 15px;
+    clip-path: ellipse(50% 50% at center);
+    position: absolute;
+    text-align: center;
+    top: -10%;
+    right: -20%;
+}
