@@ -93,7 +93,7 @@
                     </div>
                 </nav>
             </div>
-            <div class="col-2">
+            <div class="col-3">
                 <form action="{{ route('search-products') }}" method="get">
                     <div class="input-group">
                         <div class="form-outline">
@@ -106,7 +106,7 @@
                     </div>
                 </form>
             </div>
-            <div class="col-2">
+            <div class="col-1">
                 <a href="{{ route('giohang') }}"><i class="fa-solid fa-cart-shopping GH">
                         @php
                             if (session()->has('TenTaiKhoan')) {
@@ -129,7 +129,7 @@
         </div>
     </header>
 
-    <style>
+    {{-- <style>
         .img-fill {
             width: 100%;
             height: 100%;
@@ -158,7 +158,7 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </div>
+    </div> --}}
 
     <div class="container">
         <div class="row">

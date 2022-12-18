@@ -2,6 +2,37 @@
 
 @section('content')
 <link rel="stylesheet" href="{{ asset('assets/css/stylehome.css')}}">
+<style>
+    .img-fill {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+<div class="row row-height">
+    <div id="slideshow" class="carousel slide carousel-width" data-bs-ride="carousel">
+        <div class="carousel-inner slide-show__contain">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="img-fill" src="{{ asset('assets/images/bananas2.jpg') }}">
+                </div>
+                <div class="carousel-item">
+                    <img class="img-fill" src="{{ asset('assets/images/bananas1.jpg') }}">
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev btn-prev" type="button" data-bs-target="#slideshow"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next btn-next" type="button" data-bs-target="#slideshow"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
 
     <div class="content">
         <div class="title0"><p>SẢN PHẨM</p></div>
